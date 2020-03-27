@@ -13,6 +13,6 @@ class ProjectsTableSeeder extends Seeder
     public function run()
     {
         $count = 10;
-        factory(project::class, $count)->create();
+        factory(Project::class, $count)->create();
     }
 }
