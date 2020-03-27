@@ -17,10 +17,10 @@ class CreateTeamTable extends Migration
             $table->id();
             $table->timestamps();
             $table->string('name');
-            $table->json('tasks');
-            $table->json('users');
+            $table->bigInteger('tasks_id');
+            $table->bigInteger('users_id');
             $table->string('color');
-            $table->json('notes');
+            $table->bigInteger('notes_id');
             $table->bigInteger('project_id');
         });
     }
