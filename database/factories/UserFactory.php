@@ -29,7 +29,7 @@ $factory->define(User::class, function (Faker $faker) {
         'job' => $faker->jobTitle,
         'permission' => $faker->randomKey(['user', 'admin']),
         'bio' => $faker->text(70),
-        'name' => $faker->image(),
+        'image' => $faker->image(),
     ];
 });
 
