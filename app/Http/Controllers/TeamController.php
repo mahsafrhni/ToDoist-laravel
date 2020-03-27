@@ -15,7 +15,7 @@ class TeamController extends Controller
         return view('addTeam');
     }
 
-    public function editPage()
+    public function edit()
     {
         return view('editTeam');
     }

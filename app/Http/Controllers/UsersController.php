@@ -10,7 +10,7 @@ class UsersController extends Controller
 //    {
 //    }
 
-    public function showAll()
+    public function index()
     {
         return view('ShowAllPeople');
     }

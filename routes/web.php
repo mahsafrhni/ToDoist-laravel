@@ -22,7 +22,7 @@ Route::get('/', function () {
 Route::get('/home', 'HomeController@index')->name('home');
 //people-just for admin
 //Route::post('/users/add','UsersController@add');
-Route::get('/users', 'UsersController@showAll')->name('users.usersList');
+Route::get('/users', 'UsersController@index')->name('users.usersList');
 Route::post('/users/edit', 'UsersController@edit')->name('users.edit');
 Route::post('/users/delete', 'UsersController@delete')->name('users.delete');
 Route::get('/users/{$id}', 'UsersController@show($id)')->name('users.show');
