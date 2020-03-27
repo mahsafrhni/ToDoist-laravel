@@ -17,7 +17,6 @@ class CreateTeamTable extends Migration
             $table->id();
             $table->string('name');
             $table->string('color');
-            $table->bigInteger('notes_id');
             $table->timestamps();
         });
     }
