@@ -6,9 +6,9 @@ use Illuminate\Http\Request;
 
 class UsersController extends Controller
 {
-    public function add()
-    {
-    }
+//    public function add()
+//    {
+//    }
 
     public function showAll()
     {

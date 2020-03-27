@@ -13,7 +13,7 @@ class ProjectsController extends Controller
 
     public function edit()
     {
-
+        return view('editProjInfo');
     }
 
     public function delete()
@@ -24,10 +24,16 @@ class ProjectsController extends Controller
     {
     }
 
-    public function editInfo()
+    public function update()
     {
-        return view('editProjInfo');
+
     }
+
+    public function index()
+    {
+        return view('showProjects');
+    }
+
     public function __invoke()
     {
         // TODO: Implement __invoke() method.

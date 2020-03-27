@@ -8,10 +8,11 @@ class ProfileController extends Controller
 {
     public function edit()
     {
+        return view('editProfile');
     }
 
-    public function showEdit()
+    public function update()
     {
-        return view('editProfile');
+
     }
 }

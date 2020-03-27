@@ -6,15 +6,11 @@ use Illuminate\Http\Request;
 
 class TeamController extends Controller
 {
-    public function add()
-    {
-    }
-
     public function delete()
     {
     }
 
-    public function addPage()
+    public function add()
     {
         return view('addTeam');
     }
@@ -24,7 +20,7 @@ class TeamController extends Controller
         return view('editTeam');
     }
 
-    public function edit()
+    public function update()
     {
     }
 }

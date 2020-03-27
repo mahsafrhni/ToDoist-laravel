@@ -21,35 +21,35 @@ Route::get('/', function () {
 
 Route::get('/home', 'HomeController@index')->name('home');
 //people-just for admin
-Route::post('/users/add','UsersController@add');
-Route::get('/users/showAll', 'UsersController@showAll');
-Route::post('/users/edit', 'UsersController@edit' );
-Route::post('/users/delete', 'UsersController@delete' );
-Route::get('/users/show/{$id}', 'UsersController@show($id)' );
+//Route::post('/users/add','UsersController@add');
+Route::get('/users', 'UsersController@showAll')->name('users.usersList');
+Route::post('/users/edit', 'UsersController@edit')->name('users.edit');
+Route::post('/users/delete', 'UsersController@delete')->name('users.delete');
+Route::get('/users/{$id}', 'UsersController@show($id)')->name('users.show');
 ////
 //Route::get('/profile', function () {
 //
 //});
-Route::get('/profile/editpro', 'ProfileController@showEdit' );
-Route::post('/profile/edit', 'ProfileController@edit' );
+Route::get('/profile/edit', 'ProfileController@edit')->name('profile.edit');
+Route::post('/profile/update', 'ProfileController@update')->name('profile.update');
 //
-Route::get('/projects', 'ProjectsController' );
-Route::get('/projects/{$id}', 'ProjectsController@show($id)' );
-Route::post('/projects/edit', 'ProjectsController@edit' );
-Route::post('/projects/delete', 'ProjectsController@delete' );
-Route::post('/projects/add','ProjectsController@add' );
-Route::get('/projects/editinfo', 'ProjectsController@editInfo' );
+Route::get('/projects', 'ProjectsController@index')->name('projects.projectsList');
+Route::get('/projects/{$id}', 'ProjectsController@show($id)')->name('projects.show');
+Route::post('/projects/update', 'ProjectsController@update')->name('projects.update');
+Route::post('/projects/delete', 'ProjectsController@delete')->name('projects.delete');
+Route::post('/projects/add', 'ProjectsController@add')->name('projects.add');
+Route::get('/projects/edit', 'ProjectsController@edit')->name('projects.edit');
 //
-Route::post('/team/add', 'TeamController@add' );
-Route::post('/team/delete', 'TeamController@delete' );
-Route::get('/team/addPage', 'TeamController@addPage' );
-Route::post('/team/edit','TeamController@edit' );
-Route::get('/team/editpage', 'TeamController@editPage' );
+Route::post('/team/add', 'TeamController@add')->name('team.add');
+Route::post('/team/delete', 'TeamController@delete')->name('team.delete');
+Route::get('/team/add', 'TeamController@add')->name('team.add');
+Route::post('/team/update', 'TeamController@update')->name('team.update');
+Route::get('/team/edit', 'TeamController@editPage')->name('team.edit');
 //
-Route::post('/task/add', 'TasksController@add' );
-Route::post('/task/edit', 'TasksController@edit' );
-Route::post('/task/delete', 'TasksController@delete' );
+Route::post('/task/add', 'TasksController@add')->name('task.add');
+Route::post('/task/edit', 'TasksController@edit')->name('task.edit');
+Route::post('/task/delete', 'TasksController@delete')->name('task.delete');
 //
-Route::post('/note/add', 'NotesController@add' );
-Route::post('/note/edit', 'NotesController@edit' );
-Route::post('/note/delete', 'NotesController@delete' );
+Route::post('/note/add', 'NotesController@add')->name('note.add');
+Route::post('/note/edit', 'NotesController@edit')->name('note.edit');
+Route::post('/note/delete', 'NotesController@delete')->name('note.delete');
