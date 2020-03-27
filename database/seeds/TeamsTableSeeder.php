@@ -1,6 +1,6 @@
 <?php
 
-use App\team;
+use App\Team;
 use Illuminate\Database\Seeder;
 
 class TeamsTableSeeder extends Seeder
