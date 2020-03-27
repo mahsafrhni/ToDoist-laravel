@@ -28,4 +28,8 @@ class ProjectsController extends Controller
     {
         return view('editProjInfo');
     }
+    public function __invoke()
+    {
+        // TODO: Implement __invoke() method.
+    }
 }
