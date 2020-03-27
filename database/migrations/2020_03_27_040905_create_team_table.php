@@ -17,6 +17,7 @@ class CreateTeamTable extends Migration
             $table->id();
             $table->string('name');
             $table->string('color');
+            $table->bigInteger('project_id');
             $table->timestamps();
         });
     }
