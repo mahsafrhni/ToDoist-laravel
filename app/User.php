@@ -13,7 +13,7 @@ class User extends Authenticatable
 
     public function Team()
     {
-        return $this->belongsTo('App\Team');
+        return $this->belongsTo('App\Team','user_id','id');
     }
 
     public function Task()

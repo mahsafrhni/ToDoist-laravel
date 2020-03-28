@@ -17,6 +17,6 @@ class project extends Model
 
     public function Team()
     {
-        return $this->hasMany('App\Team');
+        return $this->hasMany('App\Team', 'project_id');
     }
 }
