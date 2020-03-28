@@ -18,7 +18,7 @@ class team extends Model
 
     public function User()
     {
-        return $this->hasMany('App\User','team_id','id');
+        return $this->hasMany('App\User', 'team_id');
     }
 
     public function Task()
