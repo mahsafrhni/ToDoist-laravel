@@ -10,4 +10,9 @@ class note extends Model
     protected $fillable = [
         'title', 'text',
     ];
+
+    public function Team()
+    {
+        return $this->belongsTo('App\Team');
+    }
 }
