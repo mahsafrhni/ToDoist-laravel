@@ -10,17 +10,23 @@ class TeamController extends Controller
     {
     }
 
-    public function add()
+    public function add(Request $request)
     {
-        return view('addTeam');
+        $request->id;
+        // return view('addTeam');
     }
 
-    public function edit()
+    public function edit(Request $request)
     {
-        return view('editTeam');
+        $request->id;
+        //return view('editTeam');
     }
 
     public function update()
+    {
+    }
+
+    public function insert()
     {
     }
 }

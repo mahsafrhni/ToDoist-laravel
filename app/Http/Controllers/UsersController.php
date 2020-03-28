@@ -6,9 +6,6 @@ use Illuminate\Http\Request;
 
 class UsersController extends Controller
 {
-//    public function add()
-//    {
-//    }
 
     public function index()
     {
@@ -23,8 +20,9 @@ class UsersController extends Controller
     {
     }
 
-    public function show($id)
+    public function show(Request $request)
     {
-        return view('showPerson');
+        $request->user;
+        //return view('showPerson');
     }
 }

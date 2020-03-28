@@ -6,14 +6,16 @@ use Illuminate\Http\Request;
 
 class ProjectsController extends Controller
 {
-    public function show($id)
+    public function show(Request $request)
     {
-        return view('showProjects');
+        $request->id;
+        // return view('showProjects');
     }
 
-    public function edit()
+    public function edit(Request $request)
     {
-        return view('editProjInfo');
+        $request->id;
+        // return view('editProjInfo');
     }
 
     public function delete()

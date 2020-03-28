@@ -10,7 +10,7 @@ class NotesController extends Controller
     {
     }
 
-    public function edit()
+    public function update()
     {
     }
 

@@ -10,7 +10,7 @@ class TasksController extends Controller
     {
     }
 
-    public function edit()
+    public function update()
     {
     }
 
