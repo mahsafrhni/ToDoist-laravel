@@ -12,7 +12,7 @@ class NotesTableSeeder extends Seeder
      */
     public function run()
     {
-        $count = 20;
+        $count = 30;
         factory(Note::class, $count)->create();
     }
 }

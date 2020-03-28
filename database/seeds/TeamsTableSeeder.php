@@ -12,7 +12,7 @@ class TeamsTableSeeder extends Seeder
      */
     public function run()
     {
-        $count = 13;
+        $count = 23;
         factory(Team::class, $count)->create();
     }
 }

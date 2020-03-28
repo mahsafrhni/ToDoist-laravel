@@ -12,7 +12,7 @@ class TasksTableSeeder extends Seeder
      */
     public function run()
     {
-        $count = 50;
+        $count = 60;
         factory(Task::class, $count)->create();
     }
 }

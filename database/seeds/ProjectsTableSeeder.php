@@ -12,7 +12,7 @@ class ProjectsTableSeeder extends Seeder
      */
     public function run()
     {
-        $count = 10;
+        $count = 20;
         factory(Project::class, $count)->create();
     }
 }
