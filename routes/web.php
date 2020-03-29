@@ -22,6 +22,7 @@ Route::prefix('users')->name('users.')->group(function () {
     Route::post('/delete', 'UsersController@delete')->name('delete');
     Route::get('/{user}', 'UsersController@show($user)')->name('show');
 });
+
 Route::prefix('profile')->name('profile.')->group(function () {
     Route::post('/update', 'ProfileController@update')->name('update');
     Route::get('/{user}/edit', 'ProfileController@edit($user)')->name('edit');
