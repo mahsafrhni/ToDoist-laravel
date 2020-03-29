@@ -13,8 +13,10 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::middleware('throttle:30,1')->group(function () {
+Route::middleware('throttle:15,1')->group(function () {
     Auth::routes();
+});
+Route::middleware('throttle:30,1')->group(function () {
     Route::middleware('auth')->group(function () {
         Route::get('/', 'HomeController@index')->name('home');
         //users-just for admin
