@@ -14,32 +14,43 @@ use Illuminate\Support\Facades\Route;
 */
 //Auth::routes();
 Route::get('/', 'HomeController@index')->name('home');
-//people-just for admin
-Route::get('/users', 'UsersController@index')->name('users.usersList');
-Route::post('/users/edit', 'UsersController@edit')->name('users.edit');
-Route::post('/users/delete', 'UsersController@delete')->name('users.delete');
-Route::get('/users/{user}', 'UsersController@show($user)')->name('users.show');
-//
-Route::post('/profile/update', 'ProfileController@update')->name('profile.update');
-Route::get('/profile/{user}/edit', 'ProfileController@edit($user)')->name('profile.edit');
-//
-Route::get('/projects', 'ProjectsController@index')->name('projects.projectsList');
-Route::post('/projects/add/', 'ProjectsController@add')->name('projects.add');
-Route::get('/projects/{id}', 'ProjectsController@show($user)')->name('projects.show');
-Route::post('/projects/update', 'ProjectsController@update')->name('projects.update');
-Route::post('/projects/delete', 'ProjectsController@delete')->name('projects.delete');
-Route::get('/projects/{id}/edit', 'ProjectsController@edit($user)')->name('projects.edit');
-//
-Route::post('/team/insert', 'TeamController@insert')->name('team.insert');
-Route::get('/team/{id}/add', 'TeamController@add($id)')->name('team.add');
-Route::post('/team/delete', 'TeamController@delete')->name('team.delete');
-Route::post('/team/update', 'TeamController@update')->name('team.update');
-Route::get('/team/{id}/edit', 'TeamController@edit($id)')->name('team.edit');
-//
-Route::post('/task/add', 'TasksController@add')->name('task.add');
-Route::post('/task/update', 'TasksController@update')->name('task.update');
-Route::post('/task/delete', 'TasksController@delete')->name('task.delete');
-//
-Route::post('/note/add', 'NotesController@add')->name('note.add');
-Route::post('/note/update', 'NotesController@update')->name('note.update');
-Route::post('/note/delete', 'NotesController@delete')->name('note.delete');
+
+//users-just for admin
+Route::prefix('users')->name('users.')->group(function () {
+    Route::get('/', 'UsersController@index')->name('usersList');
+    Route::post('/edit', 'UsersController@edit')->name('edit');
+    Route::post('/delete', 'UsersController@delete')->name('delete');
+    Route::get('/{user}', 'UsersController@show($user)')->name('show');
+});
+Route::prefix('profile')->name('profile.')->group(function () {
+    Route::post('/update', 'ProfileController@update')->name('update');
+    Route::get('/{user}/edit', 'ProfileController@edit($user)')->name('edit');
+});
+
+Route::prefix('projects')->name('projects.')->group(function () {
+    Route::get('/', 'ProjectsController@index')->name('projectsList');
+    Route::post('/add', 'ProjectsController@add')->name('add');
+    Route::get('/{id}', 'ProjectsController@show($user)')->name('show');
+    Route::post('/update', 'ProjectsController@update')->name('update');
+    Route::post('/delete', 'ProjectsController@delete')->name('delete');
+    Route::get('/edit', 'ProjectsController@edit($user)')->name('edit');
+});
+
+Route::prefix('team')->name('team.')->group(function () {
+    Route::post('/insert', 'TeamController@insert')->name('insert');
+    Route::post('/delete', 'TeamController@delete')->name('delete');
+    Route::post('/update', 'TeamController@update')->name('update');
+    Route::get('/{id}/edit', 'TeamController@edit($id)')->name('edit');
+});
+
+Route::prefix('task')->name('task.')->group(function () {
+    Route::post('/add', 'TasksController@add')->name('add');
+    Route::post('/update', 'TasksController@update')->name('update');
+    Route::post('/delete', 'TasksController@delete')->name('delete');
+});
+
+Route::prefix('note')->name('note.')->group(function () {
+    Route::post('/add', 'NotesController@add')->name('add');
+    Route::post('/update', 'NotesController@update')->name('update');
+    Route::post('/delete', 'NotesController@delete')->name('delete');
+});
