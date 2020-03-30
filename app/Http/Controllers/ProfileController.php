@@ -9,7 +9,6 @@ class ProfileController extends Controller
     public function edit(Request $request)
     {
         $request->user;
-       // return view('editProfile');
     }
 
     public function update()

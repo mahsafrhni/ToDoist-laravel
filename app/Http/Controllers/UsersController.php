@@ -3,13 +3,12 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use App\User;
 class UsersController extends Controller
 {
-
     public function index()
     {
-        return view('ShowAllPeople');
+        return view('user_index');
     }
 
     public function edit()
@@ -22,7 +21,7 @@ class UsersController extends Controller
 
     public function show(Request $request)
     {
-        $request->user;
-        //return view('showPerson');
+        $user = User::find($request->id);
+        //return view('user.index', ['user' => $user]);
     }
 }

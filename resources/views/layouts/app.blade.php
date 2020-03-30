@@ -15,7 +15,7 @@
 <!-- Layout Nav Side -->
 <div class="nav-side">
     <!-- Start of Navigation -->
-@include('sidebar')
+@include('layouts.sidebar')
 <!-- End of Navigation -->
     <!-- Start of Main -->
     <div class="main">
