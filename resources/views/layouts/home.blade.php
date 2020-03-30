@@ -1,4 +1,3 @@
-<?php
 @extends('layouts.app' ,['title' =>$page_title])
 @section('content')
     <html lang="en">
