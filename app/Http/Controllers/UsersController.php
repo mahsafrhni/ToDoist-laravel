@@ -8,7 +8,7 @@ class UsersController extends Controller
 {
     public function index()
     {
-        return view('user_index');
+        return view('index');
     }
 
     public function edit()
