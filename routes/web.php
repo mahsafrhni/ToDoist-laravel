@@ -53,4 +53,8 @@ Route::middleware(['auth', 'throttle:30,1'])->group(function () {
         Route::post('/update', 'NotesController@update')->name('update');
         Route::post('/delete', 'NotesController@delete')->name('delete');
     });
+    Route::prefix('account')->name('account.')->group(function () {
+        Route::get('/', 'AccountController@index')->name('edit');
+        Route::post('/', 'AccountController@update')->name('update');
+    });
 });

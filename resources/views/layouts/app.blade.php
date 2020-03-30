@@ -24,7 +24,7 @@
     <!-- End of Main -->
 </div>
 <!-- Layout Nav Side -->
-<script src="dist/js/vendor/jquery-slim.min.js"></script>
+<script src="{{asset('dist/js/vendor/jquery-slim.min.js')}}"></script>
 <script src="dist/js/vendor/popper.min.js"></script>
 <script src="dist/js/vendor/feather.min.js"></script>
 <script src="dist/js/vendor/bootstrap.min.js"></script>
