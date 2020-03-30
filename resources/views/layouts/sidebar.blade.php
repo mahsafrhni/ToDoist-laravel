@@ -1,4 +1,3 @@
-<!doctype html>
 <!-- Layout Nav Side -->
 <nav class="nav-side">
     <!-- Start of Navigation -->
