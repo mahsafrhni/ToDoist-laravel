@@ -4,11 +4,11 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class task extends Model
+class Task extends Model
 {
     protected $table = 'tasks';
     protected $fillable = [
-        'name', 'bio', 'start', 'finish', 'user_id',
+        'name', 'bio', 'finish', 'user_id',
     ];
 
     public function Team()

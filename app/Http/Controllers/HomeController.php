@@ -25,7 +25,14 @@ class HomeController extends Controller
     public function index(Request $req)
     {
         $teams = Auth::user()->Team;
-        return view('user_index', ['users' => 'teams']);
+        $tasks = Auth::user()->Task;
+        $projects = [];
+        if(!empty($teams)) {
+            foreach ($teams as $team) {
+                array_push($projects, $team->Project);
+            }
+        }
+        return view('users.index', ['users' => 'teams','page_title' => 'صفحه نخست' , 'teams' => $teams , 'tasks' => $tasks, 'projects' => $projects]);
 
     }
 }

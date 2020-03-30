@@ -1,6 +1,6 @@
 <?php
 
-use App\note;
+use App\Note;
 use Illuminate\Database\Seeder;
 
 class NotesTableSeeder extends Seeder

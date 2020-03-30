@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class team extends Model
+class Team extends Model
 {
     protected $table = 'team';
     protected $fillable = [
@@ -18,7 +18,7 @@ class team extends Model
 
     public function User()
     {
-        return $this->hasMany('App\User', 'team_id');
+        return $this->belongsToMany('App\User' , 'users_team' , 'team_id','users_id');
     }
 
     public function Task()

@@ -2,7 +2,7 @@
 
 /** @var \Illuminate\Database\Eloquent\Factory $factory */
 
-use App\note;
+use App\Note;
 use Faker\Generator as Faker;
 
 $factory->define(Note::class, function (Faker $faker) {
