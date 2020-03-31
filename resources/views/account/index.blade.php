@@ -18,8 +18,7 @@
                     <div class="tab-content">
                         <!-- My Account -->
                         <div class="item tab-pane fade show active" id="account" role="tabpanel">
-                            <form method="" action="{{ route("account.update")  }}">
-                                @method('POST')
+                            <form method="POST" action="{{ route("account.update")  }}">
                                 @csrf
                                 <input type="file" >
                                 <div class="avatar">
@@ -28,31 +27,32 @@
                                         <img src="dist/img/avatars/avatar-male-1.jpg" alt="avatar">
                                     </label>
                                 </div>
+                                <input name="form_id" type="hidden" value="account_update">
                                 <div class="form-row">
                                     <div class="col-sm-6">
                                         <div class="form-group">
                                             <label>نام</label>
-                                            <input dir="rtl" type="text" value="{{$user->first_name}}" class="form-control" placeholder="نام خود را وارد کنید">
+                                            <input name="first_name" dir="rtl" type="text" value="{{$user->first_name}}" class="form-control" placeholder="نام خود را وارد کنید">
                                         </div>
                                     </div>
                                     <div class="col-sm-6">
                                         <div class="form-group">
                                             <label>نام خانوادگی</label>
-                                            <input dir="rtl" type="text" value="{{$user->last_name}}" class="form-control" placeholder="نام خانوادگی را وارد کنید">
+                                            <input name="last_name" dir="rtl" type="text" value="{{$user->last_name}}" class="form-control" placeholder="نام خانوادگی را وارد کنید">
                                         </div>
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label>آدرس ایمیل</label>
-                                    <input dir="rtl" type="email" value="{{$user->email}}" class="form-control" placeholder="ایمیل خود را وارد کنید">
+                                    <input dir="rtl" type="email" value="{{$user->email}}" class="form-control" placeholder="ایمیل خود را وارد کنید" disabled>
                                 </div>
                                 <div class="form-group">
                                     <label>موقعیت شغلی</label>
-                                    <input dir="rtl" type="text" value="{{$user->job}}" class="form-control" placeholder="موقعیت شغلی شما چیست؟">
+                                    <input name="job" dir="rtl" type="text" value="{{$user->job}}" class="form-control" placeholder="موقعیت شغلی شما چیست؟">
                                 </div>
                                 <div class="form-group">
                                     <label>زندگی نامه</label>
-                                    <textarea dir="rtl" class="form-control" placeholder="زندگی نامه را بنویسید.">
+                                    <textarea name="bio" dir="rtl" class="form-control" placeholder="زندگی نامه را بنویسید.">
                                         {{$user->bio}}
                                     </textarea>
                                 </div>
@@ -62,22 +62,24 @@
                         <!-- My Account -->
                         <!-- Privacy & Safety -->
                         <div class="item tab-pane fade" id="privacy" role="tabpanel">
-                            <form>
+                            <form method="POST" action="{{ route("account.update")  }}">
+                                @csrf
+                                <input name="form_id" type="hidden" value="password_update">
                                 <div class="form-group">
                                     <label>کلمه عبور فعلی</label>
-                                    <input dir="rtl" type="password" class="form-control" placeholder="کلمه عبور فعلی را وارد کنید.">
+                                    <input name="current_pass" dir="rtl" type="password" class="form-control" placeholder="کلمه عبور فعلی را وارد کنید.">
                                 </div>
                                 <div class="form-row">
                                     <div class="col-sm-6">
                                         <div class="form-group">
                                             <label>کلمه عبور جدید</label>
-                                            <input dir="rtl" type="password" class="form-control" placeholder="کلمه عبور جدید را وارد کنید.">
+                                            <input name="new_pass" dir="rtl" type="password" class="form-control" placeholder="کلمه عبور جدید را وارد کنید.">
                                         </div>
                                     </div>
                                     <div class="col-sm-6">
                                         <div class="form-group">
                                             <label>تایید کلمه عبور</label>
-                                            <input dir="rtl" type="password" class="form-control" placeholder="تایید کلمه عبور جدید">
+                                            <input name="confirm_pass" dir="rtl" type="password" class="form-control" placeholder="تایید کلمه عبور جدید">
                                         </div>
                                     </div>
                                 </div>
