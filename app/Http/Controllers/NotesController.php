@@ -17,7 +17,10 @@ class NotesController extends Controller
     {
         $request->id;
     }
-    public function destroy()
+    public function destroy($id)
     {
+        $note = Note::find($id);
+        $note->delete();
+        return redirect()->route("home")->with('success', 'یادداشت مورد نظر با موفقیت حذف شد');
     }
 }

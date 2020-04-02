@@ -21,8 +21,11 @@ class UsersController extends Controller
         $request->user;
     }
 
-    public function destroy()
+    public function destroy($id)
     {
+        $user = User::find($id);
+        $user->delete();
+        return redirect()->route("users.index")->with('success', 'کاربر مورد نظر با موفقیت حذف شد');
     }
 
     public function show(Request $request)

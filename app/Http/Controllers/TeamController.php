@@ -2,12 +2,16 @@
 
 namespace App\Http\Controllers;
 
+use App\Team;
 use Illuminate\Http\Request;
 
 class TeamController extends Controller
 {
-    public function destroy()
+    public function destroy($id)
     {
+        $team = Team::find($id);
+        $team->delete();
+        return redirect()->route("home")->with('success', 'تیم مورد نظر با موفقیت حذف شد');
     }
 
     public function store(Request $request)
