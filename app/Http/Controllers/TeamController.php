@@ -6,11 +6,11 @@ use Illuminate\Http\Request;
 
 class TeamController extends Controller
 {
-    public function delete()
+    public function destroy()
     {
     }
 
-    public function add(Request $request)
+    public function store(Request $request)
     {
         $request->id;
     }
@@ -24,7 +24,5 @@ class TeamController extends Controller
     {
     }
 
-    public function insert()
-    {
-    }
+
 }

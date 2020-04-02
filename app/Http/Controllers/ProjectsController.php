@@ -16,11 +16,11 @@ class ProjectsController extends Controller
         $request->id;
     }
 
-    public function delete()
+    public function destroy()
     {
     }
 
-    public function add()
+    public function store()
     {
     }
 

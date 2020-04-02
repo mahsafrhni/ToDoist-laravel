@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\User;
+
 class UsersController extends Controller
 {
     public function index()
@@ -11,11 +12,16 @@ class UsersController extends Controller
         return view('index');
     }
 
-    public function edit()
+    public function update()
     {
     }
 
-    public function delete()
+    public function edit(Request $request)
+    {
+        $request->user;
+    }
+
+    public function destroy()
     {
     }
 

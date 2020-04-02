@@ -6,15 +6,18 @@ use Illuminate\Http\Request;
 
 class TasksController extends Controller
 {
-    public function add()
+    public function store()
     {
     }
 
     public function update()
     {
     }
-
-    public function delete()
+    public function edit(Request $request)
+    {
+        $request->id;
+    }
+    public function destroy()
     {
     }
 }

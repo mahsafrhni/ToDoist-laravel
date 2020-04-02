@@ -15,6 +15,11 @@ class AccountController extends Controller
         return view('account.index', ["page_title" => 'ویرایش حساب کاربری', 'user' => $user]);
     }
 
+    public function edit(Request $request)
+    {
+        $request->user;
+    }
+
     public function update(Request $request)
     {
         if ($request->form_id == "account_update") {
