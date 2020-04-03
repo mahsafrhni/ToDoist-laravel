@@ -24,16 +24,11 @@ class ProjectsController extends Controller
         return redirect()->route("projects.index")->with('success', 'پروژه مورد نظر با موفقیت حذف شد');
     }
 
-    public function store()
+    public function store(Request $req)
     {
     }
 
     public function update()
-    {
-
-    }
-
-    public function index()
     {
 
     }

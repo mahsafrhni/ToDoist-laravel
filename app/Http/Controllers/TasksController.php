@@ -7,8 +7,9 @@ use Illuminate\Http\Request;
 
 class TasksController extends Controller
 {
-    public function store()
+    public function store(Request $request)
     {
+        $request->id;
     }
 
     public function update()

@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use App\Team;
 use Illuminate\Http\Request;
 
-class TeamController extends Controller
+class TeamsController extends Controller
 {
     public function destroy($id)
     {
@@ -28,5 +28,9 @@ class TeamController extends Controller
     {
     }
 
+    public function show(Request $request)
+    {
+        $request->id;
+    }
 
 }

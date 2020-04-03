@@ -13,7 +13,7 @@ class Task extends Model
 
     public function Team()
     {
-        return $this->belongsTo('App\Team');
+        return $this->belongsTo('App\Team', 'tasks_team_id', 'task_id', 'team_id');
     }
 
     public function User()
